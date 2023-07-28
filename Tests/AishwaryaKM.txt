@@ -1,0 +1,204 @@
+Programming test;
+
+1).Method overloading:in the program two or more methods having same method name with having different paramaters.
+
+Example:
+class Hotel
+{
+   static void table(int noOfChairs)
+   {
+     System.out.println("no of chairs:"+noOfChairs);
+   }
+   static void table(int noOfChairs,boolean reserved)
+   {
+    System.out.println("noOfChairs:"+noOfChairs);
+    System.out.println("reserved:"+reserved);
+   }
+}
+
+class Main{
+public static void main(String[] args)
+{
+  System.out.println("Invoking hotel in main);
+  Hotel.table(4);
+  Hotel.table(6,true);
+}
+}
+
+2.)Different kinds of variables:
+  
+the different kinds of variables are:
+ 1.local variable :Variables declared inside the method
+ 2.instance variable:Variables declared outside the method and inside the class.
+ 3.static variable:Variables declared using static keyword.
+example:
+
+class carrom
+{
+  int noOfPans;//instance variable
+
+   static void play()
+   {
+    int noOfRedPans;//local variable
+   }
+  public static void main(String[] args)
+  {
+    static int noOfPlayers;//static variable
+  }
+}
+
+
+3).Difference between heap and stack memory
+  
+The heap memory is the primary memory in memory allocation where program is stored
+The stack memory where stack frame is created where local variables,lineno's,methods are executed.
+
+4.)Constructor overloading:in the class two or more Constructor having same name but different parameters
+
+class Mall
+{
+   Mall()
+   {
+    System.out.println("default constructor");
+   }
+
+  Mall(int noOfStores,String mallName)
+  {
+   System.out.println("no of stores:"+noOfStores);
+   System.out.println("mall name:"+mallName);
+  }
+  Mall(String mallName,boolan gameSection)
+  {
+   System.out.println("mall name:"+mallName);
+   system.out.println("game section is present:"+gameSection);
+  }
+}
+
+class Main
+{
+  public static void main(String[] args)
+  {
+   System.out.println("calling constructor overloading");
+   Mall ref1=new.Mall();
+   Mall ref2=new.Mall(10,"Orion");
+   System.out.println(ref2.noOfStores);
+   System.out.println(ref2.mallName);
+
+  Mall ref3=new.Mall("Mantri",true);
+   System.out.println(ref3.mallName);
+   System.out.println(ref3.gameSection);
+  }
+}
+
+7.)Constructor chaining:calling constructor from another constructor from the same class or from parent class
+1.super() chaining 2.this() chaining
+
+class Park
+{
+  int noOfBenches;
+  String parkName;
+  String location;
+ 
+
+  Park(int noOfBenches)
+  {
+   this.noOfBenches=noOfBenches;
+   System.out.println("calling first constructor");
+  }
+  Park(int noOfBenches,String parkName)
+  {
+   this(noOfBenches);
+   this.parkName=parkName;
+   System.out.println("calling second constructor");
+  }
+  Park(int noOfBenches,String parkName,String location)
+  {
+   this(noOfBenches,parkName);
+   this.location=location;
+   System.out.println("calling third constructor");
+  }
+}
+
+class Main
+{
+ public static void main(String[] args)
+ {
+  Park park1=new Park("10,"WaterTank",Davangere);
+ }
+
+}
+
+6.)static variable and static method
+
+ class Static
+ { 
+   static String name;
+   static int age;
+   static
+   {
+   this.name="Manu";
+   this.age=25;
+   }
+   static void play(String location)
+   {
+     System.out.println("calling static method");
+   }
+}
+
+class Main
+{
+  public static void main(String[] args)
+  {
+   Static.play("VidyaNagar");
+  }
+}
+
+5.)Instance method overloading:
+  
+ class Bag
+ {
+  String brand;
+  int noOfColumns;
+  int noOfZips;
+   
+   public void carry(String brand,int noOfColumns)
+   {
+    this.brand=brand;
+    this.noOfColumns;
+    System.out.println(brand);
+    System.out.println(noOfColumns);
+   }
+   public void carry(int noOfZips,string brand)
+   {
+    this.noOfZips=noOfZips;
+    this.brand=brand;
+    System.out.println(noOfzips);
+    System.out.println(brand);
+   }
+}
+
+class main
+{
+  public static void main(String[] args)
+  {
+   Bag.carry("SkyBag",6);
+   Bag.carry(5,"WildCraft);
+  }
+}
+   
+ 
+ 
+  
+
+
+  
+
+
+  
+  
+ 
+
+
+ 
+
+  
